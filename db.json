@@ -1,0 +1,17 @@
+{
+    "sanpham":[
+        {
+            "id":1,
+            "name": "iphone 16",
+            "price": "10000",
+            "image": "https://thumbs.dreamstime.com/b/innovative-medical-device-featuring-eye-image-illustrating-advanced-tracking-technology-generated-ai-358374352.jpg"
+        }, 
+        {
+            "id":2,
+            "name": "samsung s25",
+            "price": "60000",
+            "image": "https://thumbs.dreamstime.com/b/innovative-medical-device-featuring-eye-image-illustrating-advanced-tracking-technology-generated-ai-358374352.jpg"
+        }
+
+    ]
+}
