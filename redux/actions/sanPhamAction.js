@@ -1,7 +1,7 @@
 import axios from "axios";
-import { addSanPham, setSanPham, editSanPham } from "../reducers/sanPhamReducer";
+import { addSanPham, setSanPham, editSanPham, deleteSanPham } from "../reducers/sanPhamReducer";
 
-const apiUrl = "http://192.168.1.6:3000/sanpham";
+const apiUrl = "http://10.82.1.61:3000/sanpham";
 
 // hàm hiển thị sản phẩm
 export const getListSanPham = () => async (dispatch) => {
@@ -31,5 +31,15 @@ export const editSanPhamAction = (id, sanPham) =>async(dispatch)=>{
         dispatch(editSanPham(id, sanPham));       
     } catch (error) {
         console.log("lỗi sửa: ", error);
+    }
+}
+
+// xóa sản phẩm
+export const deleteSanPhamAction = (id) =>async(dispatch)=>{
+    try {
+        await axios.delete(`${apiUrl}/${id}`);
+        dispatch(deleteSanPham(id));       
+    } catch (error) {
+        console.log("lỗi xóa: ", error);
     }
 }
